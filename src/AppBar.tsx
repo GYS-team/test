@@ -24,6 +24,7 @@ import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
 import { BrowserRouter, Redirect, Switch, Route } from "react-router-dom";
 import SignIn from "./signin";
+import { Filter } from "./model/student";
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -208,7 +209,7 @@ const Pages: React.FC = () => {
 };
 
 const fakeAuth = {
-  logged: false,
+  logged: true,
   authenticate(cb: any) {
     this.logged = true;
     setTimeout(cb, 100); // fake async
